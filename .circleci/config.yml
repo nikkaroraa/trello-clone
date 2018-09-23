@@ -3,7 +3,7 @@ jobs:
   build: 
     working_directory: ~/trello-clone
     docker:
-      - image: circle/node:8
+      - image: circle/node:8.12
     steps: 
       - checkout
       - run: yarn
