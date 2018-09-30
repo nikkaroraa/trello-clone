@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import { Droppable } from 'react-beautiful-dnd';
 
 import Task from '../Task';
 
@@ -21,17 +22,22 @@ const TaskList = styled.div`
 class Column extends Component {
   render() {
     const {
-      column: { title },
+      column: { title, id },
       tasks
     } = this.props;
     return (
       <Container>
         <Title>{title}</Title>
-        <TaskList>
-          {tasks.map(task => (
-            <Task key={task.id} task={task} />
-          ))}
-        </TaskList>
+        <Droppable droppableId={id}>
+          {provided => (
+            <TaskList innerRef={provided.innerRef} {...provided.droppableProps}>
+              {tasks.map((task, index) => (
+                <Task key={task.id} task={task} index={index} />
+              ))}
+              {provided.placeholder}
+            </TaskList>
+          )}
+        </Droppable>
       </Container>
     );
   }

@@ -1,0 +1,19 @@
+{
+  "workbench.colorTheme": "Night Owl",
+    "editor.fontFamily": "Dank Mono",
+    "editor.fontSize": 16,
+    "terminal.integrated.fontSize": 14,
+    "editor.tabSize": 2,
+    "files.autoSave": "onWindowChange",
+    "editor.formatOnSave": false,
+    "[javascript]": {
+        "editor.formatOnSave": true
+    },
+    "github.hosts": [
+        {
+            "host": "https://github.com",
+            "username": "oauth",
+            "token": "system"
+        }
+    ],
+}
