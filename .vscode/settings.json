@@ -8,12 +8,5 @@
     "editor.formatOnSave": false,
     "[javascript]": {
         "editor.formatOnSave": true
-    },
-    "github.hosts": [
-        {
-            "host": "https://github.com",
-            "username": "oauth",
-            "token": "system"
-        }
-    ],
+    }
 }
